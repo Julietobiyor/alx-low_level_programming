@@ -1,15 +1,15 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
 #define UNUSED(x) (void)(x)
 
 /**
- * StringCheck - checks string
+ * isNumeric - checks if a string contains only numeric characters
  * @s: string to check
- * Return: 0 always if successful
+ * Return: boolean (1 if the string contains only digits, 0 otherwise)
  */
-
-int StringCheck(char *s)
+int isNumeric(char *s)
 {
 	int i = 0;
 
@@ -22,14 +22,13 @@ int StringCheck(char *s)
 	}
 	return (1);
 }
-
 /**
- * main - function is to write a program that adds positive numbers
+ * main - main function
  * @argc: argument count
  * @argv: vector of arguments
- *Return: always 0
+ * Return: 0 on success, 1 on error
  */
-int main(int argc, char  *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 	int result = 0;
@@ -38,7 +37,7 @@ int main(int argc, char  *argv[])
 	{
 		for (i = 1; i < argc; i++)
 		{
-			if (StringCheck(argv[i]))
+			if (isNumeric(argv[i]))
 			{
 				result += atoi(argv[i]);
 			}
