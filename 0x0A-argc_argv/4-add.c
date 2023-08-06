@@ -2,7 +2,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#define UNUSED(x) (void)(x)
 
 /**
  * isNumeric - checks if a string contains only numeric characters
@@ -26,7 +25,7 @@ int isNumeric(char *s)
  * main - main function
  * @argc: argument count
  * @argv: vector of arguments
- * Return: 0 on success, 1 on error
+ * Return: always 0
  */
 int main(int argc, char *argv[])
 {
