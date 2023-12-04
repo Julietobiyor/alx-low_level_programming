@@ -36,6 +36,7 @@ shash_table_t *shash_table_create(unsigned long int size)
  * @value: value to set
  * Return: pass fail
  */
+int set_sorted_list(shash_table_t *ht, shash_node_t *new);
 int shash_table_set(shash_table_t *ht, const char *key, const char *value)
 {
 	unsigned long int position;
